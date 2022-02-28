@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+}
+
+@media screen and (max-width: 412px) {
+
+    /*General*/ 
+    nav {
+        height: 80px;
+        width: 100%;
+        background-color: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    footer {
+        grid-area: foo;
+    }
+
+    /*Home*/ 
+    #home_grid_wrapper {
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 200vh 50px;
+        grid-template-areas: 
+        "hea"
+        "mai"
+        "foo"
+        ;
+    }
+
+    #home_main_grid_wrapper {
+        grid-area: mai; 
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 100vh;
+        grid-template-areas: 
+        "lae"
+        "new"
+        ;
+    }
+
+    #home_header_pic {
+        height: 100%;
+        width: 100%;
+    }
+
+    #home_latest_mission {
+        grid-area: lae;
+    }
+
+    #home_new_product {
+        grid-area: new;
+    }
+
+
+
+
+}
