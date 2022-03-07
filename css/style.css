@@ -1,70 +1,91 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    background-color: black;
+	box-sizing: border-box;
+	margin: 0;
+	background-color: black;
 }
 
 @media screen and (max-width: 412px) {
+	/*General*/
+	nav {
+		height: 60px;
+		width: 100%;
+		padding-right: 0.94rem;
+		background-color: black;
+		position: fixed;
 
-    /*General*/ 
-    nav {
-        height: 80px;
-        width: 100%;
-        background-color: black;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+	#burger div {
+		width: 25px;
+		height: 2px;
+		background-color: rgb(255, 255, 255);
+		margin: 5px;
+		border-radius: 10%;
+		transition: all 0.3s;
+	}
 
-    }
+	#burger {
+		cursor: pointer;
+	}
 
-    footer {
-        grid-area: foo;
-    }
+	#nav_menu {
+		background-color: rgb(8, 20, 31);
+		height: 100vh;
+		width: 100%;
+	}
 
-    /*Home*/ 
-    #home_grid_wrapper {
-        height: 100%;
-        width: 100%;
+	.toggle #line1 {
+		transform: translate(0, 7px);
+	}
 
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100vh 200vh 50px;
-        grid-template-areas: 
-        "hea"
-        "mai"
-        "foo"
-        ;
-    }
+	.toggle #line3 {
+		transform: translate(0, -7px);
+	}
 
-    #home_main_grid_wrapper {
-        grid-area: mai; 
-        height: 100%;
-        width: 100%;
+	footer {
+		grid-area: foo;
+	}
 
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100vh 100vh;
-        grid-template-areas: 
-        "lae"
-        "new"
-        ;
-    }
+	/*Home*/
+	#home_grid_wrapper {
+		height: 100%;
+		width: 100%;
 
-    #home_header_pic {
-        height: 100%;
-        width: 100%;
-    }
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 100vh 200vh 50px;
+		grid-template-areas:
+			"hea"
+			"mai"
+			"foo";
+	}
 
-    #home_latest_mission {
-        grid-area: lae;
-    }
+	#home_main_grid_wrapper {
+		grid-area: mai;
+		height: 100%;
+		width: 100%;
 
-    #home_new_product {
-        grid-area: new;
-    }
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 100vh 100vh;
+		grid-template-areas:
+			"lae"
+			"new";
+	}
 
+	#home_header_pic {
+		height: 100%;
+		width: 100%;
+	}
 
+	#home_latest_mission {
+		grid-area: lae;
+	}
 
-
+	#home_new_product {
+		grid-area: new;
+	}
 }
