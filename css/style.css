@@ -1,28 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+/*General General*/
 * {
 	box-sizing: border-box;
 	margin: 0;
 	background-color: black;
+	font-family: "Oxygen", sans-serif;
+	color: white;
+}
+
+.flexbox {
+	display: flex;
+}
+
+.lists {
+	list-style-type: none;
+}
+
+.lists li a {
+	text-decoration: none;
 }
 
 @media screen and (max-width: 412px) {
 	/*General*/
 	nav {
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+	}
+
+	#nav_bar {
+		position: relative;
 		height: 60px;
 		width: 100%;
 		padding-right: 0.94rem;
 		background-color: black;
-		position: fixed;
+		z-index: 1;
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 
+	#nav_menu {
+		position: relative;
+		top: -110vh;
+		background-color: rgb(0, 0, 0);
+		height: 100%;
+		width: 100%;
+		transition: all 0.3s;
+	}
+
+	#nav_menu_list {
+		height: 60%;
+		width: 100%;
+		padding: 0 2.5rem 0 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	#nav_menu_list li {
+		border-bottom: rgba(255, 255, 255, 0.411) solid 1px;
+		padding-bottom: 10px;
+	}
+
+	#nav_menu_list li a {
+		font-size: 0.94rem;
+	}
+
 	#burger div {
 		width: 25px;
 		height: 2px;
 		background-color: rgb(255, 255, 255);
-		margin: 5px;
+		margin: 0.31rem;
 		border-radius: 10%;
 		transition: all 0.3s;
 	}
@@ -31,10 +81,9 @@
 		cursor: pointer;
 	}
 
-	#nav_menu {
-		background-color: rgb(8, 20, 31);
-		height: 100vh;
-		width: 100%;
+	/*On burger toggle*/
+	.no-scroll {
+		overflow: hidden;
 	}
 
 	.toggle #line1 {
@@ -43,6 +92,10 @@
 
 	.toggle #line3 {
 		transform: translate(0, -7px);
+	}
+
+	.nav-active {
+		transform: translateY(110vh);
 	}
 
 	footer {

@@ -5,5 +5,5 @@ const body = document.querySelector("body");
 burger.addEventListener("click", () => {
 	navMenu.classList.toggle("nav-active");
 	burger.classList.toggle("toggle");
-	body.classList.toggle("toggle");
+	body.classList.toggle("no-scroll");
 });
