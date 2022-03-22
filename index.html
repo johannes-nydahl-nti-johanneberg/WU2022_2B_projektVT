@@ -8,35 +8,53 @@
 		<title>Hem</title>
 	</head>
 	<body>
+		<nav aria-labelledby="navigation_bar" class="navbar navbar_top">
+			<img id="nav_logo" src="" alt="" />
+			<div id="burger">
+				<div id="line1"></div>
+				<div id="line2"></div>
+				<div id="line3"></div>
+			</div>
+		</nav>
+		<nav id="navmenu">
+			<ul id="navmenu_list" class="lists">
+				<li><a href="#">Raketer</a></li>
+				<li><a href="#">Sateliter</a></li>
+				<li><a href="#">Rymdfarkost</a></li>
+				<li><a href="#">Skynet</a></li>
+				<li><a href="#">Nyheter</a></li>
+				<li><a href="#">Galleri</a></li>
+				<li><a href="#">Jobba här</a></li>
+				<li><a href="about.html">Om oss</a></li>
+				<li><a href="store.html">Webbbutik</a></li>
+			</ul>
+		</nav>
+
 		<div id="home_grid_wrapper">
 			<header id="home_header">
-				<nav>
-					<div id="nav_bar">
-						<img id="nav_logo" src="" alt="" />
-						<div id="burger">
-							<div id="line1"></div>
-							<div id="line2"></div>
-							<div id="line3"></div>
-						</div>
-					</div>
-					<div id="nav_menu">
-						<ul id="nav_menu_list" class="lists">
-							<li><a href="#">Moose 9</a></li>
-							<li><a href="#">Skynet</a></li>
-							<li><a href="#">Nyheter</a></li>
-							<li><a href="about.html">Om oss</a></li>
-							<li><a href="#">Galleri</a></li>
-							<li><a href="#">Lediga tjänster</a></li>
-							<li><a href="store.html">Webbbutik</a></li>
-						</ul>
-					</div>
-				</nav>
-				<div id="home_header_pic"></div>
+				<div id="home_hero" class="background_imgs hero section">
+					<h1 class="home_hero_title">
+						VI ÄR <br />
+						<strong>{namn}</strong>.
+					</h1>
+					<p class="home_hero_desc">Sveriges största och yngsta rymdföretag</p>
+				</div>
 			</header>
-			<div id="home_main_grid_wrapper">
-				<section id="home_latest_mission"></section>
+			<main id="home_main_grid_wrapper">
+				<section id="home_latest" class="background_imgs section">
+					<h2 class="home_h2">
+						UPPDRAG <br />
+						APACHE
+					</h2>
+					<p>
+						Lorem ipsum dolor sit amet, <br />
+						consectetur adipisicing elit. <br />
+						Eligendi fugiat similique et amet.
+					</p>
+					<a class="section_button center_flex" href="#">LÄS MER</a>
+				</section>
 				<section id="home_new_product"></section>
-			</div>
+			</main>
 			<footer id="footer"></footer>
 		</div>
 		<script src="js/script.js"></script>
