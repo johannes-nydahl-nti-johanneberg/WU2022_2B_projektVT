@@ -47,6 +47,10 @@ a {
 	align-items: center;
 }
 
+.hero_desc {
+	text-align: center;
+}
+
 .center_flex {
 	display: flex;
 	justify-content: center;
@@ -198,7 +202,7 @@ a {
 		grid-area: lae;
 	}
 
-	#home_new_product {
+	#home_new {
 		grid-area: new;
 	}
 
@@ -214,4 +218,8 @@ a {
 
 #home_latest {
 	background-image: url("../img/home_latest.jpg");
+}
+
+#home_new {
+	background-image: url("../img/home_new.jpg");
 }
