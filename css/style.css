@@ -144,6 +144,14 @@ a {
 
 	footer {
 		grid-area: foo;
+		background-color: black;
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer_icons {
+		height: 56px;
+		width: 56px;
 	}
 
 	.hero h1 {
@@ -173,7 +181,7 @@ a {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 100vh 200vh 50px;
+		grid-template-rows: 100vh 200vh 150px;
 		grid-template-areas:
 			"hea"
 			"mai"
