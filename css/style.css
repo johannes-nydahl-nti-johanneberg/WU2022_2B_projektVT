@@ -30,11 +30,12 @@ a {
 	display: flex;
 }
 
-.lists {
+.list {
 	list-style-type: none;
+	padding: 0;
 }
 
-.lists li a {
+.list li a {
 	text-decoration: none;
 }
 
@@ -44,7 +45,6 @@ a {
 
 .hero {
 	height: 100%;
-	align-items: center;
 }
 
 .hero_desc {
@@ -80,7 +80,7 @@ a {
 
 	#navmenu {
 		position: fixed;
-		margin-top: 60px;
+		margin-top: 55px;
 		top: -110vh;
 		background-color: rgba(0, 0, 0, 0.945);
 		height: 100%;
@@ -146,12 +146,33 @@ a {
 		grid-area: foo;
 		background-color: black;
 		display: flex;
-		justify-content: center;
+		align-items: center;
+		justify-content: space-around;
+		flex-direction: column;
+		padding-top: 1rem;
+	}
+
+	footer p {
+		opacity: 0.5;
+		font-size: 0.75rem;
+	}
+
+	#footer_socials {
+		display: flex;
+	}
+
+	#footer_socials li {
+		margin: 0 0.4rem 0 0.4rem;
 	}
 
 	.footer_icons {
-		height: 56px;
-		width: 56px;
+		height: 40px;
+		width: 40px;
+	}
+
+	.footer_links_container li {
+		font-size: 0.9rem;
+		display: inline-block;
 	}
 
 	.hero h1 {
@@ -181,7 +202,7 @@ a {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 100vh 200vh 150px;
+		grid-template-rows: 100vh 300vh 200px;
 		grid-template-areas:
 			"hea"
 			"mai"
@@ -195,10 +216,11 @@ a {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 100vh 100vh;
+		grid-template-rows: 100vh 100vh 100vh;
 		grid-template-areas:
 			"lae"
-			"new";
+			"new"
+			"res";
 	}
 
 	#home_header_pic {
@@ -206,20 +228,63 @@ a {
 		width: 100%;
 	}
 
-	#home_latest_mission {
-		grid-area: lae;
-	}
-
-	#home_new {
-		grid-area: new;
-	}
-
 	.home_h2 {
 		font-size: 2.6rem;
 	}
 }
+/*Desktop*/
+/*General*/
+
+footer {
+	grid-area: foo;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	padding-top: 1rem;
+}
 
 /*Home*/
+#home_latest {
+	grid-area: lae;
+}
+
+#home_new {
+	grid-area: new;
+}
+
+#home_result {
+	grid-area: res;
+}
+
+#home_grid_wrapper {
+	height: 100%;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100vh 300vh 110px;
+	grid-template-areas:
+		"hea"
+		"mai"
+		"foo";
+}
+
+#home_main_grid_wrapper {
+	grid-area: mai;
+	height: 100%;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100vh 100vh 100vh;
+	grid-template-areas:
+		"lae"
+		"new"
+		"res";
+}
+
 #home_hero {
 	background-image: url("../img/home_hero.jpg");
 }
@@ -229,5 +294,9 @@ a {
 }
 
 #home_new {
+	background-image: url("../img/home_new.jpg");
+}
+
+#home_result {
 	background-image: url("../img/home_new.jpg");
 }

@@ -17,10 +17,9 @@
 			</div>
 		</nav>
 		<nav aria-label="navigation_menu" id="navmenu">
-			<menu id="navmenu_list" class="lists">
+			<menu id="navmenu_list" class="list">
 				<li><a href="#">Raketer</a></li>
 				<li><a href="#">Sateliter</a></li>
-				<li><a href="#">Rymdfarkost</a></li>
 				<li><a href="#">Skynet</a></li>
 				<li><a href="#">Nyheter</a></li>
 				<li><a href="#">Kundtjänst</a></li>
@@ -41,8 +40,8 @@
 				</div>
 			</header>
 			<main id="home_main_grid_wrapper">
-				<section aria-labelledby="home_h2" id="home_latest" class="background_imgs section">
-					<h2 id="home_h2" class="home_h2">
+				<section id="home_latest" class="background_imgs section">
+					<h2 class="home_h2">
 						UPPDRAG <br />
 						APACHE
 					</h2>
@@ -53,8 +52,17 @@
 					</p>
 					<a class="section_button center_flex" href="#">LÄS MER</a>
 				</section>
-				<section aria-labelledby="home_h2" id="home_new" class="background_imgs section">
-					<h2 id="home_h2" class="home_h2">SKYNET</h2>
+				<section id="home_new" class="background_imgs section">
+					<h2 class="home_h2">SKYNET V2</h2>
+					<p>
+						Lorem ipsum dolor sit amet, <br />
+						consectetur adipisicing elit. <br />
+						Eligendi fugiat similique et amet.
+					</p>
+					<a class="section_button center_flex" href="#">BESTÄLL</a>
+				</section>
+				<section id="home_result" class="background_imgs section">
+					<h2 class="home_h2">INSERT HERE</h2>
 					<p>
 						Lorem ipsum dolor sit amet, <br />
 						consectetur adipisicing elit. <br />
@@ -64,20 +72,38 @@
 				</section>
 			</main>
 			<footer id="footer">
-				<div id="footer_social_container">
-					<a href="#">
-						<img class="footer_icons" src="./img/linkedin.svg" alt="Linkedin ikon" />
-					</a>
-					<a href="#">
-						<img class="footer_icons" src="./img/instagram.svg" alt="Instagram ikon" />
-					</a>
-					<a href="#">
-						<img class="footer_icons" src="./img/twitter.svg" alt="Twitter ikon" />
-					</a>
-					<a href="#">
-						<img class="footer_icons" src="./img/youtube.svg" alt="YouTube ikon" />
-					</a>
-				</div>
+				<ul class="list" id="footer_socials">
+					<li>
+						<a href="#">
+							<img class="footer_icons" src="./img/linkedin.svg" alt="Linkedin ikon" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="footer_icons" src="./img/instagram.svg" alt="Instagram ikon" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="footer_icons" src="./img/twitter.svg" alt="Twitter ikon" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="footer_icons" src="./img/youtube.svg" alt="YouTube ikon" />
+						</a>
+					</li>
+				</ul>
+				<ul class="footer_links_container list">
+					<li><a href="#">Info • </a></li>
+					<li><a href="#">Kontakt • </a></li>
+					<li><a href="#">Investerare</a></li>
+				</ul>
+				<ul class="footer_links_container list">
+					<li><a href="#">Integritet • </a></li>
+					<li><a href="#">Villkor</a></li>
+				</ul>
+				<p>© 2022 Namn här</p>
 			</footer>
 		</div>
 		<script src="js/script.js"></script>
