@@ -9,12 +9,20 @@
 	</head>
 	<body>
 		<nav aria-label="navigation_bar" class="navbar navbar_top">
-			<img id="nav_logo" src="" alt="" />
+			<img id="navbar_logo" src="" alt="" />
 			<div id="burger">
 				<div id="line1"></div>
 				<div id="line2"></div>
 				<div id="line3"></div>
 			</div>
+			<ul id="navbar_links" class="list">
+				<li><a href="#">Raketer</a></li>
+				<li><a href="#">Sateliter</a></li>
+				<li><a href="#">Skynet</a></li>
+				<li><a href="#">Nyheter</a></li>
+				<li><a href="#">Webbbutik</a></li>
+				<li><a href="#">Om oss</a></li>
+			</ul>
 		</nav>
 		<nav aria-label="navigation_menu" id="navmenu">
 			<menu id="navmenu_list" class="list">
@@ -45,7 +53,7 @@
 						UPPDRAG <br />
 						APACHE
 					</h2>
-					<p>
+					<p class="home_desc">
 						Lorem ipsum dolor sit amet, <br />
 						consectetur adipisicing elit. <br />
 						Eligendi fugiat similique et amet.
@@ -54,7 +62,7 @@
 				</section>
 				<section id="home_new" class="background_imgs section">
 					<h2 class="home_h2">SKYNET V2</h2>
-					<p>
+					<p class="home_desc">
 						Lorem ipsum dolor sit amet, <br />
 						consectetur adipisicing elit. <br />
 						Eligendi fugiat similique et amet.
@@ -63,7 +71,7 @@
 				</section>
 				<section id="home_result" class="background_imgs section">
 					<h2 class="home_h2">INSERT HERE</h2>
-					<p>
+					<p class="home_desc">
 						Lorem ipsum dolor sit amet, <br />
 						consectetur adipisicing elit. <br />
 						Eligendi fugiat similique et amet.
@@ -95,17 +103,19 @@
 					</li>
 				</ul>
 				<ul class="footer_links_container list">
-					<li><a href="#">Info • </a></li>
-					<li><a href="#">Kontakt • </a></li>
-					<li><a href="#">Investerare</a></li>
+					<li class="footer_links"><a href="#">Info • </a></li>
+					<li class="footer_links"><a href="#">Kontakt • </a></li>
+					<li class="footer_links"><a href="#">Investerare</a></li>
+					<li class="footer_desktop footer_links"><a href="#"> • Kundtjänst • </a></li>
+					<li class="footer_desktop footer_links"><a href="#">Jobba här</a></li>
 				</ul>
 				<ul class="footer_links_container list">
-					<li><a href="#">Integritet • </a></li>
-					<li><a href="#">Villkor</a></li>
+					<li class="footer_links"><a href="#">Integritet • </a></li>
+					<li class="footer_links"><a href="#">Villkor</a></li>
 				</ul>
 				<p>© 2022 Namn här</p>
 			</footer>
 		</div>
-		<script src="js/script.js"></script>
+		<script src="./js/script.js"></script>
 	</body>
 </html>
