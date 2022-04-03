@@ -22,6 +22,22 @@ a {
 	background-color: rgba(240, 248, 255, 0);
 }
 
+#navbar_right_container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#navbar_logo {
+	height: 60%;
+	margin-left: 1rem;
+}
+
+#navbar_logo img {
+	height: 100%;
+}
+
 .background_imgs {
 	background-position: center;
 	background-size: cover;
@@ -108,7 +124,7 @@ footer p {
 
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 	transition: all 0.2s;
 }
 
@@ -124,11 +140,13 @@ footer p {
 .hero h1 {
 	font-size: 6rem;
 	text-align: center;
+	text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .hero p {
 	font-size: 1.8rem;
 	text-align: center;
+	text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .section {
@@ -161,12 +179,12 @@ footer p {
 	grid-area: lae;
 }
 
-#home_new {
-	grid-area: new;
+#home_skynet {
+	grid-area: sky;
 }
 
-#home_result {
-	grid-area: res;
+#home_rocket {
+	grid-area: roc;
 }
 
 #home_grid_wrapper {
@@ -192,16 +210,18 @@ footer p {
 	grid-template-rows: 100vh 100vh 100vh;
 	grid-template-areas:
 		"lae"
-		"new"
-		"res";
+		"sky"
+		"roc";
 }
 
 .home_h2 {
 	font-size: 6rem;
+	text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .home_desc {
 	font-size: 2rem;
+	text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 #home_hero {
@@ -212,15 +232,19 @@ footer p {
 	background-image: url("../img/home_latest.jpg");
 }
 
-#home_new {
-	background-image: url("../img/home_new.jpg");
+#home_skynet {
+	background-image: url("../img/home_skynet.jpg");
 }
 
-#home_result {
-	background-image: url("../img/home_new.jpg");
+#home_rocket {
+	background-image: url("../img/home_rocket.jpg");
 }
 
-/*About*/
+/*About/history*/
+#about_hero {
+	background-image: url("../img/about_hero.jpg");
+}
+
 #about_timeline_04 {
 	grid-area: zf;
 }
@@ -286,7 +310,7 @@ footer p {
 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 400vh 50vh;
+	grid-template-rows: 400vh auto;
 	grid-template-areas:
 		"tim"
 		"fut";
@@ -294,7 +318,7 @@ footer p {
 
 #about_future {
 	grid-area: fut;
-	background-image: url("../img/home_new.jpg");
+	background-image: url("../img/about_future.jpg");
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -311,7 +335,7 @@ footer p {
 	background-color: rgb(255, 255, 255);
 
 	grid-template-columns: 1fr 7px 1fr;
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 	grid-template-areas:
 		"i4 li zf"
 		"ze li i8"
@@ -321,13 +345,14 @@ footer p {
 }
 
 .about_timeline_img {
+	object-fit: cover;
+	padding: 4rem;
 	height: 100%;
 	width: 100%;
-	padding: 1rem;
 }
 
 .about_timeline {
-	padding: 0 15rem 0 5rem;
+	padding: 0 1rem 0 5rem;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -338,8 +363,8 @@ footer p {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	background-color: rgb(255, 255, 255);
 	border: 8px rgb(0, 0, 0) solid;
 	border-radius: 50%;
@@ -351,12 +376,12 @@ footer p {
 }
 
 .about_timeline_title {
-	font-size: 8rem;
+	font-size: 5rem;
 	color: black;
 }
 
 #about_future_title {
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 #about_future_desc {
@@ -392,12 +417,17 @@ footer p {
 
 #store_send_space {
 	grid-area: sen;
-	background-image: url("../img/home_latest.jpg");
+	background-image: url("../img/store_mail.jpg");
 }
 
 #store_broadband {
 	grid-area: bro;
-	background-image: url("../img/home_latest.jpg");
+	background-image: url("../img/store_broadband.jpg");
+}
+
+#store_hero {
+	grid-area: hea;
+	background-image: url("../img/store_hero.jpg");
 }
 
 #store_all {
@@ -409,7 +439,7 @@ footer p {
 }
 
 #store_all h2 {
-	font-size: 4rem;
+	font-size: 3.4rem;
 	margin-bottom: 2rem;
 	color: black;
 	text-align: center;
@@ -436,12 +466,20 @@ footer p {
 
 .store_product_title {
 	color: black;
-	font-size: 0.9rem;
+	font-size: 1.4rem;
 }
 
 .store_product_price {
 	color: black;
 	font-size: 0.9rem;
+}
+
+.store_titles {
+	text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.store_desc {
+	text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 #navbar_cart {
@@ -474,21 +512,21 @@ footer p {
 	grid-area: mai;
 	height: 100%;
 	width: 100%;
-
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: minmax(300px, 100vh);
+	grid-template-rows: 90vh;
 	grid-template-areas: "mss mic";
 }
 
 #mug_slideshow {
+	max-width: 100%;
+	padding: 5rem;
+	margin-right: 0.5rem;
 	grid-area: mss;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
-	margin: 2rem;
-	object-fit: contain;
 }
 
 #mug_info_container {
@@ -501,7 +539,8 @@ footer p {
 .mug_arrows {
 	position: absolute;
 	top: 50%;
-	height: 30px;
+	height: 35px;
+	width: 35px;
 	background-color: rgba(0, 0, 0, 0.411);
 	padding: 0.3rem;
 	border-radius: 50%;
@@ -524,10 +563,9 @@ footer p {
 }
 
 .mug_pic {
-	display: none;
 	width: 100%;
 	max-height: 100%;
-	height: auto;
+	display: none;
 	object-fit: contain;
 }
 
@@ -540,11 +578,12 @@ footer p {
 	font-size: 2rem;
 }
 
-#mug_price {
+#mug_price strong {
 	color: black;
 }
 
 #mug_desc {
+	margin: 0.5rem 0 0.5rem 0;
 	color: black;
 }
 
@@ -554,7 +593,7 @@ footer p {
 }
 
 #mug_color_container {
-	margin-top: 0.5rem;
+	margin: 0.5rem 0 0.5rem 0;
 }
 
 .mug_color {
@@ -610,7 +649,7 @@ footer p {
 
 		display: flex;
 		align-items: center;
-		justify-content: end;
+		justify-content: space-between;
 		transition: all 0.2s;
 	}
 
@@ -728,7 +767,7 @@ footer p {
 	}
 
 	.hero h1 {
-		font-size: 3.5rem;
+		font-size: 2.7rem;
 	}
 
 	.hero p {
@@ -775,13 +814,8 @@ footer p {
 		grid-template-rows: 100vh 100vh 100vh;
 		grid-template-areas:
 			"lae"
-			"new"
-			"res";
-	}
-
-	#home_header_pic {
-		height: 100%;
-		width: 100%;
+			"sky"
+			"roc";
 	}
 
 	.home_h2 {
@@ -813,7 +847,7 @@ footer p {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 200vh 50vh;
+		grid-template-rows: auto 50vh;
 		grid-template-areas:
 			"tim"
 			"fut";
@@ -821,7 +855,7 @@ footer p {
 
 	#about_future {
 		grid-area: fut;
-		background-image: url("../img/home_new.jpg");
+		background-image: url("../img/about_future.jpg");
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -838,7 +872,7 @@ footer p {
 		background-color: rgb(255, 255, 255);
 
 		grid-template-columns: 1fr 4px 1fr;
-		grid-template-rows: repeat(4, 1fr);
+		grid-template-rows: repeat(5, 1fr);
 		grid-template-areas:
 			"i4 li zf"
 			"ze li i8"
@@ -848,8 +882,7 @@ footer p {
 	}
 
 	.about_timeline_img {
-		height: 100%;
-		width: 100%;
+		object-fit: cover;
 		padding: 1rem;
 	}
 
@@ -862,8 +895,8 @@ footer p {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		height: 25px;
-		width: 25px;
+		height: 20px;
+		width: 20px;
 		background-color: rgb(255, 255, 255);
 		border: 5px rgb(0, 0, 0) solid;
 		border-radius: 50%;
@@ -915,16 +948,6 @@ footer p {
 			"aal";
 	}
 
-	#store_send_space {
-		grid-area: sen;
-		background-image: url("../img/home_latest.jpg");
-	}
-
-	#store_broadband {
-		grid-area: bro;
-		background-image: url("../img/home_latest.jpg");
-	}
-
 	#store_all {
 		height: 100%;
 		width: 100%;
@@ -971,8 +994,9 @@ footer p {
 	#navbar_cart {
 		height: 40%;
 		width: auto;
-		order: 0;
 		margin-right: 1rem;
+		display: block;
+		order: 0;
 	}
 
 	#navbar_cart img {
@@ -1006,22 +1030,22 @@ footer p {
 			"mic";
 	}
 
-	#mug_pic_container {
+	#mug_slideshow {
+		position: relative;
+
 		grid-area: mpc;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin: 80px 2rem 1rem 2rem;
-	}
-
-	#mug_slideshow {
-		position: relative;
+		padding: 0;
 	}
 
 	.mug_arrows {
 		position: absolute;
 		top: 50%;
 		height: 30px;
+		width: 30px;
 		background-color: rgba(0, 0, 0, 0.411);
 		padding: 0.3rem;
 		border-radius: 50%;
@@ -1056,6 +1080,7 @@ footer p {
 		margin: 0.5rem 2rem 1rem 2rem;
 		grid-area: mic;
 		width: 80%;
+		display: block;
 	}
 
 	#mug_info h1 {
