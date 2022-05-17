@@ -134,7 +134,7 @@ footer p {
 }
 
 #navbar_links {
-	font-size: 1.3rem;
+	font-size: 0.95rem;
 }
 
 .hero h1 {
@@ -249,7 +249,7 @@ footer p {
 	grid-area: zf;
 }
 
-#about_timeline_04_img {
+#about_timeline_04_img_container {
 	grid-area: i4;
 }
 
@@ -257,7 +257,7 @@ footer p {
 	grid-area: ze;
 }
 
-#about_timeline_08_img {
+#about_timeline_08_img_container {
 	grid-area: i8;
 }
 
@@ -265,7 +265,7 @@ footer p {
 	grid-area: ot;
 }
 
-#about_timeline_12_img {
+#about_timeline_12_img_container {
 	grid-area: i2;
 }
 
@@ -273,7 +273,7 @@ footer p {
 	grid-area: of;
 }
 
-#about_timeline_15_img {
+#about_timeline_15_img_container {
 	grid-area: i5;
 }
 
@@ -281,7 +281,7 @@ footer p {
 	grid-area: tz;
 }
 
-#about_timeline_20_img {
+#about_timeline_20_img_container {
 	grid-area: i0;
 }
 
@@ -296,11 +296,16 @@ footer p {
 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 100vh 450vh 200px;
+	grid-template-rows: 100vh 1fr 200px;
 	grid-template-areas:
 		"hea"
 		"mai"
 		"foo";
+}
+
+.about_timeline_img_container {
+	height: 100%;
+	width: 100%;
 }
 
 #about_main_grid_wrapper {
@@ -310,7 +315,7 @@ footer p {
 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 400vh auto;
+	grid-template-rows: 1fr 50vh;
 	grid-template-areas:
 		"tim"
 		"fut";
@@ -638,7 +643,7 @@ footer p {
 }
 
 /*Mobile*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 760px) {
 	/*General*/
 	.navbar {
 		position: fixed;
@@ -833,7 +838,7 @@ footer p {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 100vh 250vh 200px;
+		grid-template-rows: 100vh 1fr 200px;
 		grid-template-areas:
 			"hea"
 			"mai"

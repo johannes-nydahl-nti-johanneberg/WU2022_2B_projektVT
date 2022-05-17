@@ -4,7 +4,6 @@ const navBar = document.querySelector(".navbar");
 const body = document.querySelector("body");
 const arrowLeft = document.querySelector("#mug_left_arrow");
 const arrowRight = document.querySelector("#mug_right_arrow");
-
 const isMug = document.URL.includes("mug.html");
 
 let lastScrollY = window.scrollY;
@@ -26,15 +25,21 @@ burger.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-	if (lastScrollY < window.scrollY) {
-		navBar.classList.add("navbar_hidden");
+	const mediaQuery = window.matchMedia("screen and (max-width: 700px)");
+	if (!mediaQuery.matches) {
+		if (lastScrollY < window.scrollY) {
+			navBar.classList.add("navbar_hidden");
+		} else {
+			navBar.classList.remove("navbar_hidden");
+			if (window.scrollY > 0) {
+				navBar.classList.remove("navbar_top");
+			} else if (!isMug) {
+				navBar.classList.add("navbar_top");
+			}
+		}
 	} else {
 		navBar.classList.remove("navbar_hidden");
-		if (window.scrollY > 0) {
-			navBar.classList.remove("navbar_top");
-		} else if (!isMug) {
-			navBar.classList.add("navbar_top");
-		}
+		navBar.classList.remove("navbar_top");
 	}
 	lastScrollY = window.scrollY;
 });
