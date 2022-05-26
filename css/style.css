@@ -163,6 +163,7 @@ footer p {
 	border: white solid 2px;
 	transition: 0.3s;
 	font-size: 1.2rem;
+	padding: 0.4rem;
 }
 
 #navbar_links li {
@@ -414,15 +415,48 @@ footer p {
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100vh auto;
+	grid-template-rows: 100vh 100px auto;
 	grid-template-areas:
 		"sen bro"
+		"sig sig"
 		"aal aal";
 }
 
 #store_send_space {
 	grid-area: sen;
 	background-image: url("../img/store_mail.jpg");
+}
+
+#store_signup {
+	grid-area: sig;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-color: black;
+	padding: 0 1rem 0 1rem;
+}
+
+#store_signup_button {
+	height: 50px;
+	width: 100px;
+	margin-top: 0;
+}
+
+#store_email_box {
+	border: 0;
+	outline: 0;
+	border-bottom: 1px solid rgb(255, 255, 255);
+	background-color: black;
+	height: 40px;
+	width: 200px;
+	font-size: 1rem;
+	margin-left: 1rem;
+}
+
+#store_signup > p {
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 #store_broadband {
@@ -460,13 +494,23 @@ footer p {
 	min-width: 0;
 }
 
-.store_product_title:hover {
-	color: rgb(233, 119, 119);
-}
-
 .store_product_img {
 	width: 100%;
 	height: auto;
+	transition: all 0.1s ease;
+}
+
+.store_product_img_container:hover img {
+	filter: brightness(50%);
+}
+
+.store_product_img_container a {
+	position: absolute;
+	display: none;
+}
+
+.store_product_img_container:hover a {
+	display: inline;
 }
 
 .store_product_title {
@@ -946,10 +990,11 @@ footer p {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 50vh 50vh auto;
+		grid-template-rows: 50vh 50vh auto auto;
 		grid-template-areas:
 			"sen"
 			"bro"
+			"sig"
 			"aal";
 	}
 
@@ -977,10 +1022,6 @@ footer p {
 		min-width: 0;
 	}
 
-	.store_product_title:hover {
-		color: rgb(233, 119, 119);
-	}
-
 	.store_product_img {
 		width: 100%;
 		height: auto;
@@ -994,6 +1035,28 @@ footer p {
 	.store_product_price {
 		color: black;
 		font-size: 0.9rem;
+	}
+
+	#store_signup {
+		flex-direction: column;
+		padding: 1rem;
+	}
+
+	#store_signup_button {
+		height: 50px;
+		width: 100px;
+	}
+
+	#store_email_box {
+		height: 40px;
+		width: 100%;
+		font-size: 1rem;
+		margin-left: 0;
+	}
+
+	#store_signup > p {
+		font-size: 1.1rem;
+		text-align: center;
 	}
 
 	#navbar_cart {
