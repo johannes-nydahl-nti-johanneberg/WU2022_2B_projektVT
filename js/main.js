@@ -2,8 +2,6 @@ const burger = document.querySelector("#burger");
 const navMenu = document.querySelector("#navmenu");
 const navBar = document.querySelector(".navbar");
 const body = document.querySelector("body");
-const arrowLeft = document.querySelector("#mug_left_arrow");
-const arrowRight = document.querySelector("#mug_right_arrow");
 const isMug = document.URL.includes("mug.html");
 
 let lastScrollY = window.scrollY;

@@ -49,24 +49,126 @@
 				<div id="mug_slideshow">
 					<img class="mug_pic" src="./img/store_mug.jpg" alt="Vit mugg" />
 					<img class="mug_pic" src="./img/store_mug2.jpg" alt="Vit mugg" />
-					<img id="mug_left_arrow" class="mug_arrows" src="./img/arrow_left.svg" alt="Vänsterpil" />
-					<img id="mug_right_arrow" class="mug_arrows" src="./img/arrow_right.svg" alt="Högerpil" />
+					<button>
+						<img id="mug_left_arrow_product" class="mug_arrows" src="./img/arrow_left.svg" alt="Vänsterpil" />
+					</button>
+					<button>
+						<img id="mug_right_arrow_product" class="mug_arrows" src="./img/arrow_right.svg" alt="Högerpil" />
+					</button>
 				</div>
-				<div id="mug_info_container">
-					<section id="mug_info">
+				<section id="mug_info_container">
+					<div id="mug_info">
+						<div id="mug_tags">
+							<a class="mug_tag" href="#">2022 kollektion</a>
+							<a class="mug_tag" href="#">Unisex</a>
+							<a class="mug_tag" href="#">Premium</a>
+							<a class="mug_tag" href="#">Muggar</a>
+						</div>
 						<h1>SpaceY-mugg</h1>
-						<p id="mug_price"><strong>500 SEK</strong></p>
+						<p id="mug_price"><strong>499 SEK</strong></p>
+						<p id="mug_vat">inkl. 25% moms</p>
 						<p id="mug_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vitae placeat quisquam unde consectetur earum id quas voluptatum facere pariatur!</p>
 						<h2>Färger</h2>
 						<div id="mug_color_container">
-							<div class="mug_color"></div>
-							<div class="mug_color"></div>
-							<div class="mug_color"></div>
-							<div class="mug_color"></div>
+							<div class="mug_color color_choice"></div>
+							<div class="mug_color color_choice"></div>
+							<div class="mug_color color_choice"></div>
+							<div class="mug_color color_choice"></div>
 						</div>
-						<div id="mug_cart_button">LÄGG TILL I VARUKORG</div>
-					</section>
-				</div>
+						<div id="mug_quantity_buy">
+							<div id="mug_quantity">
+								<button id="mug_quantity_minus" class="mug_quantity_button">-</button>
+								<p id="mug_quantity_number">1</p>
+								<button id="mug_quantity_plus" class="mug_quantity_button">+</button>
+							</div>
+							<button id="mug_add_button" class="black_button">LÄGG TILL I VARUKORG</button>
+						</div>
+						<p id="mug_shipping">Förväntad leverans om 3-5 arbetsdagar</p>
+					</div>
+				</section>
+				<section id="mug_details">
+					<h2>Produktdetaljer</h2>
+					<hr />
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, exercitationem fugiat illo dolores quaerat, adipisci id vero praesentium dolorem quod, neque fuga! Adipisci quasi impedit laboriosam optio quos sed possimus?</p>
+					<h3>Egenskaper</h3>
+					<ul>
+						<li>100% porslin</li>
+						<li>Funkar i mikrovågsugnar</li>
+						<li>Kan köras i diskmaskin</li>
+						<li>3 års garanti</li>
+					</ul>
+				</section>
+				<section id="mug_similar">
+					<h2>Du kanske också gillar</h2>
+					<hr />
+					<div id="mug_similar_arrows">
+						<button id="mug_left_arrow_similar" aria-label="Vänster" class="arrow arrow_left"></button>
+						<button id="mug_right_arrow_similar" aria-label="Höger" class="arrow arrow_right"></button>
+					</div>
+					<div id="mug_similar_showcase">
+						<a href="mug.html" class="store_product">
+							<div class="store_product_img_container">
+								<img class="store_product_img" src="./img/store_mug.jpg	" alt="Vit mugg" />
+								<div class="section_button center_flex store_button">VISA</div>
+							</div>
+							<div class="store_colors_container">
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+							</div>
+							<h3 class="store_product_title">Mugg</h3>
+							<p class="store_product_price">499 SEK</p>
+						</a>
+						<a href="mug.html" class="store_product">
+							<div class="store_product_img_container">
+								<img class="store_product_img" src="./img/store_mug.jpg	" alt="Vit mugg" />
+								<div class="section_button center_flex store_button">VISA</div>
+							</div>
+							<div class="store_colors_container">
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+							</div>
+							<h3 class="store_product_title">Mugg</h3>
+							<p class="store_product_price">499 SEK</p>
+						</a>
+						<a href="mug.html" class="store_product">
+							<div class="store_product_img_container">
+								<img class="store_product_img" src="./img/store_mug.jpg	" alt="Vit mugg" />
+								<div class="section_button center_flex store_button">VISA</div>
+							</div>
+							<div class="store_colors_container">
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+							</div>
+							<h3 class="store_product_title">Mugg</h3>
+							<p class="store_product_price">499 SEK</p>
+						</a>
+						<a href="mug.html" class="store_product">
+							<div class="store_product_img_container">
+								<img class="store_product_img" src="./img/store_mug.jpg	" alt="Vit mugg" />
+								<div class="section_button center_flex store_button">VISA</div>
+							</div>
+							<div class="store_colors_container">
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+								<div class="color_choice store_color"></div>
+							</div>
+							<h3 class="store_product_title">Mugg</h3>
+							<p class="store_product_price">499 SEK</p>
+						</a>
+					</div>
+				</section>
+				<section id="store_signup">
+					<h2>ANMÄL DIG TILL NYHETSBREVET, FÅ 10% RABATT</h2>
+					<input type="email" id="store_email_box" placeholder="Din e-postadress" />
+					<button class="section_button center_flex" id="store_signup_button">ANMÄL</button>
+				</section>
 			</main>
 			<footer id="footer">
 				<ul class="list" id="footer_socials">
@@ -106,6 +208,6 @@
 			</footer>
 		</div>
 		<script src="./js/main.js"></script>
-		<script src="./js/slideshow.js"></script>
+		<script src="./js/product.js"></script>
 	</body>
 </html>

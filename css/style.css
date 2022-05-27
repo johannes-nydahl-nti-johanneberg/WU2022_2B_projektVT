@@ -12,6 +12,21 @@ a {
 	text-decoration: none;
 }
 
+button {
+	display: inline-block;
+	border: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	background: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
 .navbar {
 	background-color: black;
 	display: flex;
@@ -46,6 +61,28 @@ a {
 
 .flexbox {
 	display: flex;
+}
+
+.arrow {
+	width: 15px;
+	height: 15px;
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	margin-bottom: 0.3rem;
+}
+
+.arrow_down {
+	transform: rotate(45deg);
+}
+
+.arrow_left {
+	transform: rotate(-225deg);
+}
+
+.arrow_right {
+	transform: rotate(-45deg);
 }
 
 .list {
@@ -129,8 +166,8 @@ footer p {
 }
 
 #navmenu {
-	height: 0;
-	width: 0;
+	display: none;
+	z-index: 1;
 }
 
 #navbar_links {
@@ -168,7 +205,7 @@ footer p {
 
 #navbar_links li {
 	display: inline-block;
-	margin: 0 1rem 0 1rem;
+	margin: 0 0.8rem 0 0.8rem;
 }
 
 #burger {
@@ -415,11 +452,80 @@ footer p {
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100vh 100px auto;
+	grid-template-rows: 100vh 40vh auto auto 40vh auto;
 	grid-template-areas:
 		"sen bro"
-		"sig sig"
-		"aal aal";
+		"guc guc"
+		"shb shb"
+		"aal aal"
+		"cli cli"
+		"sig sig";
+}
+
+#store_shipping_banner {
+	grid-area: shb;
+	background-color: black;
+	text-align: center;
+}
+
+#store_climate {
+	grid-area: cli;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 1rem 3rem 1rem;
+}
+
+#store_climate h2 {
+	color: black;
+	font-size: 2.3rem;
+}
+
+#store_climate p {
+	color: black;
+	font-size: 1rem;
+}
+
+#store_climate img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#store_climate_img_container {
+	height: 100%;
+	margin-left: 1rem;
+}
+
+#store_category {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+#store_product_buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+#store_product_buttons p {
+	color: black;
+}
+
+.store_product_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.store_category_button {
+	width: 100px;
 }
 
 #store_send_space {
@@ -434,7 +540,54 @@ footer p {
 	justify-content: center;
 	gap: 1rem;
 	background-color: black;
-	padding: 0 1rem 0 1rem;
+	padding: 2rem 1rem 2rem 1rem;
+}
+
+#store_gucci {
+	grid-area: guc;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#store_gucci_content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+}
+
+#store_gucci::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/store_gucci.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: brightness(0.4);
+}
+
+#store_gucci h2 {
+	font-size: 2rem;
+	text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+#store_gucci p {
+	text-shadow: 0 0 5px rgb(0, 0, 0);
+	font-size: 1rem;
+	text-align: center;
+}
+
+#store_gucci_content {
+	position: relative;
 }
 
 #store_signup_button {
@@ -454,7 +607,7 @@ footer p {
 	margin-left: 1rem;
 }
 
-#store_signup > p {
+#store_signup > h2 {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
@@ -479,7 +632,7 @@ footer p {
 
 #store_all h2 {
 	font-size: 3.4rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	color: black;
 	text-align: center;
 }
@@ -504,13 +657,25 @@ footer p {
 	filter: brightness(50%);
 }
 
-.store_product_img_container a {
-	position: absolute;
-	display: none;
+.store_product_img_container {
+	position: relative;
 }
 
-.store_product_img_container:hover a {
-	display: inline;
+.store_product_img_container > .store_button {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
+	width: 60%;
+	height: 15%;
+	font-size: 1.5rem;
+}
+
+.store_product_img_container:hover > .store_button {
+	display: flex;
 }
 
 .store_product_title {
@@ -521,6 +686,27 @@ footer p {
 .store_product_price {
 	color: black;
 	font-size: 0.9rem;
+}
+
+.store_color {
+	height: 30px;
+	width: 30px;
+}
+
+.store_colors_container {
+	margin-top: 0.2rem;
+	margin-bottom: -0.3rem;
+}
+.store_colors_container :nth-child(1) {
+	background-color: rgb(247, 173, 247);
+}
+
+.store_colors_container :nth-child(2) {
+	background-color: rgb(170, 255, 248);
+}
+
+.store_colors_container :nth-child(3) {
+	background-color: rgb(255, 170, 170);
 }
 
 .store_titles {
@@ -563,8 +749,12 @@ footer p {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 90vh;
-	grid-template-areas: "mss mic";
+	grid-template-rows: 90vh auto auto auto;
+	grid-template-areas:
+		"mss mic"
+		"det det"
+		"sim sim"
+		"sig sig";
 }
 
 #mug_slideshow {
@@ -578,11 +768,38 @@ footer p {
 	align-items: center;
 }
 
+#mug_add_button {
+	height: 44px;
+}
+
 #mug_info_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	grid-area: mic;
+	margin-right: 1rem;
+}
+
+#mug_tags {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.mug_tag {
+	color: #313131;
+	height: 35px;
+
+	border: 1px solid #313131;
+	padding: 0.3rem;
+	font-size: 0.9rem;
+	transition: all 0.1s ease;
+}
+
+.mug_tag:hover {
+	color: black;
+	border: 1px solid black;
 }
 
 .mug_arrows {
@@ -598,17 +815,26 @@ footer p {
 
 .mug_arrows:hover {
 	background-color: black;
-	cursor: pointer;
 }
 
-#mug_right_arrow {
+#mug_right_arrow_product {
 	right: 0;
 	margin-right: 1rem;
 }
 
-#mug_left_arrow {
+#mug_left_arrow_product {
 	left: 0;
 	margin-left: 1rem;
+}
+
+#mug_similar_showcase {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	width: 100%;
+	transition: all 0.3s ease;
+	margin-top: 2rem;
 }
 
 .mug_pic {
@@ -629,6 +855,7 @@ footer p {
 
 #mug_price strong {
 	color: black;
+	font-size: 1.5rem;
 }
 
 #mug_desc {
@@ -645,18 +872,133 @@ footer p {
 	margin: 0.5rem 0 0.5rem 0;
 }
 
-.mug_color {
+#mug_similar {
+	position: relative;
+	grid-area: sim;
+	margin: 0 1rem 2rem 1rem;
+	overflow: hidden;
+}
+
+#mug_similar_arrows {
+	display: flex;
+	justify-content: center;
+	margin: 2rem 1rem 1rem 1rem;
+	display: none;
+}
+
+#mug_left_arrow_similar {
+	margin-right: 2rem;
+}
+
+#mug_right_arrow_similar {
+	margin-left: 2rem;
+}
+
+#mug_similar_arrows > * {
+	height: 30px;
+	width: 30px;
+}
+
+#mug_similar h2 {
+	color: black;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+#mug_quantity {
+	border: solid 2px black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 44px;
+	width: 120px;
+	margin-right: 1rem;
+}
+
+#mug_quantity_buy {
+	display: flex;
+	align-items: center;
+}
+
+#mug_quantity_number {
+	color: black;
+	display: inline;
+	font-size: 1rem;
+}
+
+#mug_vat {
+	color: #313131;
+	font-size: 0.8rem;
+}
+
+#mug_shipping {
+	margin-top: 0.5rem;
+	color: #313131;
+	font-size: 0.8rem;
+}
+
+#mug_details {
+	grid-area: det;
+	margin: 0 1rem 1rem 1rem;
+}
+
+#mug_details h2 {
+	color: black;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+#mug_details h3 {
+	color: black;
+	font-size: 1.3rem;
+	margin-top: 0.5rem;
+}
+
+#mug_details p {
+	color: black;
+	margin-top: 1rem;
+}
+
+#mug_details ul li {
+	color: black;
+	margin-top: 1rem;
+}
+
+.mug_quantity_button {
+	color: white;
+	background-color: black;
+	border: none;
+	height: 100%;
+	width: 30px;
+	font-size: 0.9rem;
+	transition: all;
+}
+
+.mug_quantity_button {
+	color: white;
+	background-color: black;
+	border: none;
+	height: 100%;
+	width: 30px;
+	font-size: 0.9rem;
+	transition: all;
+}
+
+.color_choice {
 	border: 1px rgba(0, 0, 0, 0.322) solid;
 	border-radius: 50%;
-	height: 40px;
-	width: 40px;
 	display: inline-block;
 	transition: all 0.3s;
 }
 
-.mug_color:hover {
+.color_choice:hover {
 	border-color: red;
 	cursor: pointer;
+}
+
+.mug_color {
+	height: 40px;
+	width: 40px;
 }
 
 #mug_color_container :nth-child(1) {
@@ -671,19 +1013,17 @@ footer p {
 	background-color: rgb(255, 170, 170);
 }
 
-#mug_cart_button {
+.black_button {
 	border: 2px solid black;
 	color: black;
 	padding: 0.5rem;
-	width: auto;
 	transition: 0.3s;
-	display: inline-block;
+	background-color: white;
 }
 
-#mug_cart_button:hover {
+.black_button:hover {
 	background-color: black;
 	color: white;
-	cursor: pointer;
 }
 
 /*Mobile*/
@@ -703,6 +1043,7 @@ footer p {
 	}
 
 	#navmenu {
+		display: block;
 		position: fixed;
 		margin-top: 55px;
 		top: -110vh;
@@ -749,8 +1090,8 @@ footer p {
 	}
 
 	#burger {
-		cursor: pointer;
 		display: block;
+		cursor: pointer;
 	}
 
 	/*On burger toggle*/
@@ -990,12 +1331,15 @@ footer p {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 50vh 50vh auto auto;
+		grid-template-rows: 50vh 50vh 40vh auto auto auto auto;
 		grid-template-areas:
 			"sen"
 			"bro"
-			"sig"
-			"aal";
+			"guc"
+			"shb"
+			"aal"
+			"cli"
+			"sig";
 	}
 
 	#store_all {
@@ -1016,6 +1360,25 @@ footer p {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 2rem;
+	}
+
+	#store_category {
+		gap: 0.5rem;
+	}
+
+	.store_category_button {
+		width: 57px;
+		height: 35px;
+		font-size: 0.7rem;
+	}
+
+	.store_product_img_container > .store_button {
+		font-size: 0.8rem;
+	}
+
+	.store_color {
+		height: 23px;
+		width: 23px;
 	}
 
 	.store_product {
@@ -1054,9 +1417,32 @@ footer p {
 		margin-left: 0;
 	}
 
-	#store_signup > p {
+	#store_signup > h2 {
 		font-size: 1.1rem;
 		text-align: center;
+	}
+
+	#store_climate {
+		grid-area: cli;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem 1rem 3rem 1rem;
+	}
+
+	#store_climate h2 {
+		color: black;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	#store_climate p {
+		color: black;
+		font-size: 0.8rem;
+	}
+
+	#store_climate img {
+		display: none;
 	}
 
 	#navbar_cart {
@@ -1070,6 +1456,10 @@ footer p {
 	#navbar_cart img {
 		height: 100%;
 		width: auto;
+	}
+
+	#store_gucci {
+		padding: 1rem;
 	}
 
 	/*Mug*/
@@ -1092,21 +1482,48 @@ footer p {
 
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr auto;
+		grid-template-rows: auto auto auto auto auto;
 		grid-template-areas:
 			"mpc"
-			"mic";
+			"mic"
+			"det"
+			"sim"
+			"sig";
 	}
 
 	#mug_slideshow {
 		position: relative;
-
 		grid-area: mpc;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 80px 2rem 1rem 2rem;
+		margin: 80px 1rem 0rem 1rem;
 		padding: 0;
+	}
+	.mug_similar_showcase_right {
+		transform: translateX(-50%);
+	}
+
+	#mug_similar_showcase {
+		width: 150%;
+		gap: 3rem;
+	}
+
+	#mug_info {
+		margin-bottom: 1rem;
+	}
+
+	#mug_details {
+		margin-bottom: 2rem;
+	}
+
+	#mug_similar_arrows {
+		display: flex;
+	}
+
+	#mug_similar_arrows > * {
+		height: 20px;
+		width: 20px;
 	}
 
 	.mug_arrows {
@@ -1122,17 +1539,6 @@ footer p {
 
 	.mug_arrows:hover {
 		background-color: black;
-		cursor: pointer;
-	}
-
-	#mug_right_arrow {
-		right: 0;
-		margin-right: 1rem;
-	}
-
-	#mug_left_arrow {
-		left: 0;
-		margin-left: 1rem;
 	}
 
 	.mug_pic {
@@ -1145,7 +1551,7 @@ footer p {
 	}
 
 	#mug_info_container {
-		margin: 0.5rem 2rem 1rem 2rem;
+		margin: 1rem 1rem 1rem 1rem;
 		grid-area: mic;
 		width: 80%;
 		display: block;
